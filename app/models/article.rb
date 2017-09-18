@@ -28,7 +28,7 @@ class Article < ActiveRecord::Base
   end
 
   def self.most_popular
-    all.sort_by{|a| a.comments.count }.last
+    all.sort_by{|a| a.comments.size }.last
   end
 
   def self.random
